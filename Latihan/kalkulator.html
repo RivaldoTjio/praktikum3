@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator</title>
+
+</head>
+
+<script type="text/javascript">
+	
+	function tambah () {
+		document.form.result.value = ""
+		var a = parseFloat(document.form.bil1.value) 
+		var b = parseFloat(document.form.bil2.value)
+		if(isNaN(a) == false && isNaN(b) == false){
+		var hasil = a+b
+		document.form.result.value = hasil
+		} else {
+			alert("Inputan Harus Berupa Angka !")
+		}
+	}
+
+	function kurangi() {
+		document.form.result.value = ""
+		var a = parseFloat(document.form.bil1.value) 
+		var b = parseFloat(document.form.bil2.value)
+		if(isNaN(a) == false && isNaN(b) == false){
+		var hasil = a-b
+		document.form.result.value = hasil	
+		} else {
+			alert("Inputan Harus Berupa Angka !")
+		}
+	}
+	function kali() {
+		document.form.result.value = ""
+		var a = parseFloat(document.form.bil1.value) 
+		var b = parseFloat(document.form.bil2.value)
+		if(isNaN(a) == false && isNaN(b) == false){
+		var hasil = a*b
+		document.form.result.value = hasil
+		} else {
+			alert("Inputan Harus Berupa Angka !")
+		}
+	}
+
+	function bagi() {
+		document.form.result.value = ""
+		var a = parseFloat(document.form.bil1.value) 
+		var b = parseFloat(document.form.bil2.value)
+		if(isNaN(a) == false && isNaN(b) == false){
+			var hasil = a/b
+		document.form.result.value = hasil	
+		} else {
+			alert("Inputan Harus Berupa Angka !")
+		}
+			
+	}
+
+
+
+</script>
+<body>
+
+
+<center>
+
+	<form method="POST" name="form">
+	
+	<h1>Kalkulator</h1>
+	Bilangan 1 <input type="text" name="bil1"> 
+	<br>
+	<br>
+	Bilangan 2 <input type="text" name="bil2">
+	<br><br>
+	<input type="button" value="+" onclick= tambah()>
+	<input type="button" value="-" onclick= kurangi()>
+	<input type="button" value="*" onclick= kali()>
+	<input type="button" value="/" onclick= bagi()>
+	<br><br>
+	Hasil <input type="text" name="result">
+	</form>
+
+</center>
+	
+
+
+</body>
+</html>
